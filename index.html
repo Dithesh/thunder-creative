@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thunder Creatives — We cause creative storms</title>
+  <meta name="description" content="Thunder Creatives is a creative studio from India crafting brand identities, packaging, websites, social campaigns, motion and content.">
+  <meta name="theme-color" content="#070707">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <svg class="loader__bolt" viewBox="0 0 256 256"><polygon points="123.1 116.07 65.65 72.23 65.65 256 132.9 139.16 190.35 183.77 190.35 0 123.1 116.07"/></svg>
+    <div class="loader__count"><span class="loader__num">0</span>%</div>
+    <div class="loader__label">Brewing a creative storm</div>
+  </div>
+
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><em class="cursor__label"></em></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#home" class="nav__logo" aria-label="Thunder Creatives home"><img src="assets/logo.png" alt="Thunder Creatives"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about" data-hover>Studio</a>
+      <a href="#services" data-hover>Services</a>
+      <a href="#work" data-hover>Work</a>
+      <a href="#contact" data-hover>Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn--red nav__cta magnetic" data-open-contact><span>Let's talk</span></a>
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <nav class="menu__links">
+      <a href="#home"><i>01</i>Home</a>
+      <a href="#about"><i>02</i>Studio</a>
+      <a href="#services"><i>03</i>Services</a>
+      <a href="#work"><i>04</i>Work</a>
+      <a href="#contact"><i>05</i>Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <h1 class="sr-only">Thunder Creatives — We cause creative storms</h1>
+      <div class="hero__top">
+        <p class="hero__tag"><span class="dot"></span>Creative studio · India</p>
+        <p class="hero__tag hero__tag--right">Branding · Packaging · Web · Social · Motion</p>
+      </div>
+      <div class="hero__bottom">
+        <p class="hero__brand">THUNDER<span>creatives</span></p>
+        <p class="hero__lede">We don’t follow trends.<br>Visuals that define. Stories that stick.</p>
+        <a href="#about" class="hero__scroll" data-hover><span>Scroll</span><i></i></a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="wrap">
+        <p class="eyebrow"><span>(01)</span> Our motto</p>
+        <h2 class="display split">Agency vision.<br><em>Studio precision.</em></h2>
+        <div class="about__grid">
+          <p class="about__lead scrub-words">Thunder Creatives blends strategic clarity with the precision of a creative studio. From brand blueprints to visual execution, we transform ideas into immersive brand experiences where every pixel speaks intention.</p>
+          <div class="about__side reveal-up">
+            <p>We don’t just design — we craft visual languages that define brands. Nestled in India, we think with global ambition and deliver with local insight.</p>
+            <ul class="pillars">
+              <li><b>Strategy</b><span>Naming, positioning, brand voice</span></li>
+              <li><b>Design</b><span>Identity, packaging, web, campaigns</span></li>
+              <li><b>Motion</b><span>3D, animation, reels, film</span></li>
+              <li><b>Content</b><span>Shoots, CGI, post-production</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>We don’t follow trends</span><svg viewBox="0 0 256 256"><use href="#bolt"/></svg>
+          <span class="outline">We cause creative storms</span><svg viewBox="0 0 256 256"><use href="#bolt"/></svg>
+          <span>We don’t follow trends</span><svg viewBox="0 0 256 256"><use href="#bolt"/></svg>
+          <span class="outline">We cause creative storms</span><svg viewBox="0 0 256 256"><use href="#bolt"/></svg>
+        </div>
+      </div>
+
+      <!-- Studio reel: pinned horizontal scroll -->
+      <div class="reel">
+        <div class="reel__head wrap">
+          <p class="eyebrow"><span>(02)</span> From the studio</p>
+          <p class="reel__hint">Keep scrolling →</p>
+        </div>
+        <div class="reel__track">
+          <figure class="reel__item reel__item--tall"><div class="reel__media"><img src="assets/img/toyota-ad.jpg" alt="Toyota Rethink Traffic campaign key visual"></div><figcaption><b>Toyota</b> Rethink Traffic</figcaption></figure>
+          <figure class="reel__item"><div class="reel__media"><img src="assets/img/vrindaam-oils.jpg" alt="Vrindaam ayurvedic product set"></div><figcaption><b>Vrindaam</b> Packaging</figcaption></figure>
+          <figure class="reel__item reel__item--tall"><div class="reel__media"><video src="assets/video/sushupti.mp4" poster="assets/img/sushupti-1.jpg" muted loop playsinline autoplay preload="metadata"></video></div><figcaption><b>Sushupti</b> Reels</figcaption></figure>
+          <figure class="reel__item reel__item--sq"><div class="reel__media"><img src="assets/img/chings.jpg" alt="Ching's chilli oil key visual"></div><figcaption><b>Ching’s</b> Key visual</figcaption></figure>
+          <figure class="reel__item"><div class="reel__media"><img src="assets/img/indigo-dest.jpg" alt="goIndiGo international destinations creative"></div><figcaption><b>goIndiGo</b> Campaign</figcaption></figure>
+          <figure class="reel__item reel__item--sq"><div class="reel__media"><img src="assets/img/jaipore.jpg" alt="Jaipore perfume packaging"></div><figcaption><b>Jaipore</b> Perfume</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span>(03)</span> Our creative DNA</p>
+          <h2 class="display split">Strike once.<br><em>Make it unforgettable.</em></h2>
+        </div>
+        <div class="svc-grid">
+          <!-- cards injected by js/main.js from SERVICES -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK (circular wheel) ============ -->
+    <section class="work" id="work">
+      <div class="wrap work__intro">
+        <p class="eyebrow"><span>(04)</span> Selected work</p>
+        <h2 class="display split">Hot off the<br><em>Moodboard.</em></h2>
+        <p class="work__sub reveal-up">We pitched it. We built it. We made it gorgeous. Dive into our selected projects — each story shows how Thunder Creatives brings concepts to life with precision and creativity.</p>
+      </div>
+
+      <div class="wheel-stage">
+        <div class="wheel">
+          <div class="wheel__rays"></div>
+          <div class="wheel__ring"></div>
+          <div class="wheel__hub">
+            <div class="wheel__icons"></div>
+          </div>
+        </div>
+
+        <div class="wheel-info">
+          <div class="wheel-info__bar"></div>
+          <p class="wheel-info__count"><b class="js-cur">01</b> / <span class="js-total">12</span></p>
+          <p class="wheel-info__cat js-cat">Social campaign</p>
+          <h3 class="wheel-info__client js-client">Toyota</h3>
+          <p class="wheel-info__title js-title">Rethink Traffic</p>
+          <div class="wheel-info__actions">
+            <button class="play magnetic" data-open-project aria-label="Open project"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+            <span class="wheel-info__hint">Scroll to rotate · Click to open</span>
+          </div>
+        </div>
+
+        <aside class="panel" aria-live="polite">
+          <div class="panel__media"></div>
+          <div class="panel__meta">
+            <div><small>Client</small><b class="js-p-client">Toyota</b></div>
+            <div><small>Tags</small><p class="tags js-p-tags"></p></div>
+            <button class="panel__plus" data-open-project aria-label="Open project details">+</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTS ============ -->
+    <section class="clients">
+      <div class="wrap">
+        <p class="eyebrow"><span>(05)</span> Clients</p>
+        <h2 class="display split">Our trophy <em>shelf.</em></h2>
+        <p class="clients__sub reveal-up">From startups to legacy brands, our clients span industries and geographies — and trust us to elevate their look, feel, and visual voice.</p>
+      </div>
+      <div class="logo-rail">
+        <div class="logo-rail__track">
+          <img src="assets/logos/indigo.png" alt="IndiGo"><img src="assets/logos/coca-cola.png" alt="Hindustan Coca-Cola Beverages"><img src="assets/logos/gsk.png" alt="GSK"><img src="assets/logos/hexagon.png" alt="Hexagon"><img src="assets/logos/vrindaam.png" alt="Vrindaam">
+          <img src="assets/logos/indigo.png" alt=""><img src="assets/logos/coca-cola.png" alt=""><img src="assets/logos/gsk.png" alt=""><img src="assets/logos/hexagon.png" alt=""><img src="assets/logos/vrindaam.png" alt="">
+        </div>
+      </div>
+      <div class="word-rail" aria-hidden="true">
+        <div class="word-rail__track">
+          <span>Toyota</span><i>✦</i><span>Ching’s Secret</span><i>✦</i><span>Hangyo</span><i>✦</i><span>Vi</span><i>✦</i><span>Melorra</span><i>✦</i><span>Jaipore</span><i>✦</i><span>Sushupti</span><i>✦</i>
+          <span>Toyota</span><i>✦</i><span>Ching’s Secret</span><i>✦</i><span>Hangyo</span><i>✦</i><span>Vi</span><i>✦</i><span>Melorra</span><i>✦</i><span>Jaipore</span><i>✦</i><span>Sushupti</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <!-- TODO(client): replace the email / phone / location / social links below with real details -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow"><span>(06)</span> Contact</p>
+        <h2 class="contact__title split">Ready to strike<br>a <em>conversation?</em></h2>
+        <div class="contact__row">
+          <button class="big-cta magnetic" data-open-contact data-cursor="Talk">
+            <span class="big-cta__fill"></span>
+            <span class="big-cta__text">Let’s talk</span>
+            <svg viewBox="0 0 256 256"><use href="#bolt"/></svg>
+          </button>
+          <div class="contact__details reveal-up">
+            <div><small>Write to us</small><a href="mailto:hello@thundercreatives.in" data-hover>hello@thundercreatives.in</a></div>
+            <div><small>Call</small><a href="tel:+910000000000" data-hover>+91 00000 00000</a></div>
+            <div><small>Studio</small><p>India</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__word" aria-label="Thunder"></div>
+    <div class="footer__bar wrap">
+      <p>© <span class="js-year">2026</span> Thunder Creatives</p>
+      <ul class="socials">
+        <li><a href="#" aria-label="Instagram" data-hover><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg></a></li>
+        <li><a href="#" aria-label="LinkedIn" data-hover><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a></li>
+        <li><a href="#" aria-label="Behance" data-hover><svg viewBox="0 0 24 24"><path d="M3 7h5a2.5 2.5 0 0 1 0 5H3zM3 12h5.5a2.5 2.5 0 0 1 0 5H3zM14 13.5h7a3.5 3.5 0 0 0-7 0 3.5 3.5 0 0 0 6.5 1.8M15 8h5"/></svg></a></li>
+        <li><a href="#" aria-label="YouTube" data-hover><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" class="fill"/></svg></a></li>
+      </ul>
+      <button class="to-top" data-hover>Back to top ↑</button>
+    </div>
+  </footer>
+
+  <!-- ============ PROJECT DRAWER ============ -->
+  <div class="drawer drawer--project" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="drawer__scrim" data-close></div>
+    <div class="drawer__panel" data-lenis-prevent>
+      <button class="drawer__close" data-close aria-label="Close">✕</button>
+      <div class="drawer__body"></div>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT DRAWER ============ -->
+  <div class="drawer drawer--contact" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Contact form">
+    <div class="drawer__scrim" data-close></div>
+    <div class="drawer__panel" data-lenis-prevent>
+      <button class="drawer__close" data-close aria-label="Close">✕</button>
+      <div class="drawer__body">
+        <p class="eyebrow"><span>⚡</span> New project</p>
+        <h3 class="drawer__title">Tell us about<br>your <em>storm.</em></h3>
+        <form class="form" novalidate>
+          <label class="field"><input name="name" required placeholder=" " autocomplete="name"><span>Your name</span></label>
+          <label class="field"><input name="email" type="email" required placeholder=" " autocomplete="email"><span>Email</span></label>
+          <label class="field"><input name="company" placeholder=" " autocomplete="organization"><span>Company / brand</span></label>
+          <fieldset class="chips">
+            <legend>I need help with</legend>
+            <label><input type="checkbox" name="service" value="Branding & logo"><span>Branding &amp; logo</span></label>
+            <label><input type="checkbox" name="service" value="Packaging"><span>Packaging</span></label>
+            <label><input type="checkbox" name="service" value="Website"><span>Website</span></label>
+            <label><input type="checkbox" name="service" value="Social & ads"><span>Social &amp; ads</span></label>
+            <label><input type="checkbox" name="service" value="Motion & 3D"><span>Motion &amp; 3D</span></label>
+            <label><input type="checkbox" name="service" value="Content shoot"><span>Content shoot</span></label>
+          </fieldset>
+          <label class="field field--area"><textarea name="message" rows="4" required placeholder=" "></textarea><span>Project details</span></label>
+          <button type="submit" class="btn btn--red btn--block"><span>Send it ⚡</span></button>
+          <p class="form__note" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bolt" viewBox="0 0 256 256"><polygon points="123.1 116.07 65.65 72.23 65.65 256 132.9 139.16 190.35 183.77 190.35 0 123.1 116.07"/></symbol>
+  </svg>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
